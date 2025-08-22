@@ -16,7 +16,7 @@ from googleapiclient.discovery import build
 # Constants
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 CREDENTIALS_CONFIG = os.environ.get('CREDENTIALS_CONFIG')
-SERVICE_ACCOUNT_PATH = os.environ.get('SERVICE_ACCOUNT_PATH', 'service_account.json')
+SERVICE_ACCOUNT_PATH = os.environ.get('SERVICE_ACCOUNT_PATH', 'SA.json')
 
 @dataclass
 class SpreadsheetContext:
@@ -762,6 +762,6 @@ def list_spreadsheets(ctx: Context = None) -> List[Dict[str, str]]:
     return []
 
 
-def main():
+if __name__ == "__main__":
     # Run the server
     mcp.run()

@@ -32,3 +32,6 @@ strict = true
 
 [project.scripts]
 mcp-google-sheets = "mcp_google_sheets:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/foo"]
